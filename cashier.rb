@@ -1,4 +1,10 @@
+require "./cart"
+
 class Cashier
+  def initialize(cart)
+    @cart = cart if cart.class == "Cart"
+  end
+
   def check(number_of_cans)
     if number_of_cans % 3 == 0
       "$#{number_of_cans / 3}"
