@@ -1,9 +1,10 @@
 require "./cashier"
+require "./cart"
 require "spec_helper"
 
 describe "Cashier#check" do
   subject do
-    Cashier.new.check(number_of_cans)
+    Cashier.new(Cart.new).check(number_of_cans)
   end
 
   context "one can" do
@@ -24,7 +25,7 @@ describe "Cashier#check" do
 
   context "pound" do
     subject do
-      Cashier.new.check(weight_of_cans)
+      Cashier.new(Cart.new).check(weight_of_cans)
     end
 
     let(:weight_of_cans) { "1pound" }
