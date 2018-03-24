@@ -1,6 +1,7 @@
 class Can
-  def initialize(cost_par_can)
+  def initialize(cost_par_can:, weight_par_can:)
     @cost_par_can = cost_par_can.to_f
+    @weight_par_can = weight_par_can.to_f
   end
 
   def cost(number_of_cans)
