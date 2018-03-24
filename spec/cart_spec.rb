@@ -46,3 +46,22 @@ describe "Can#return_to_shelf" do
     expect(cart.instance_variable_get(:@number_of_cans)).to eq(9)
   end
 end
+
+
+describe "Can#number_of_cans" do
+  subject do
+    cart.number_of_cans
+  end
+
+  let(:cart) do
+    Cart.new
+  end
+  before do
+    cart.add_can(10)
+  end
+
+  it "reduce cans in the cart" do
+    subject
+    expect(subject).to eq(10)
+  end
+end
