@@ -1,4 +1,4 @@
-require "./can"
+require "./lib/can"
 require "spec_helper"
 
 describe "Can#initialize" do

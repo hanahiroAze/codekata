@@ -1,5 +1,5 @@
-require "./cashier"
-require "./cart"
+require "./lib/cashier"
+require "./lib/cart"
 require "spec_helper"
 
 describe "Cashier#check" do

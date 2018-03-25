@@ -1,4 +1,4 @@
-require "./cart"
+require "./lib/cart"
 require "spec_helper"
 
 describe "Cart#initialize" do

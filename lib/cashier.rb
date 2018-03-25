@@ -1,4 +1,4 @@
-require "./cart"
+require "./lib/cart"
 
 class Cashier
   def initialize(cart)

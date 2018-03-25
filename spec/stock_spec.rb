@@ -1,5 +1,5 @@
-require "./can"
-require "./stock"
+require "./lib/can"
+require "./lib/stock"
 require "spec_helper"
 
 describe "Stock#initialize" do
