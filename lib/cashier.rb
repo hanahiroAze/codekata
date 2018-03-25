@@ -1,5 +1,3 @@
-require "./lib/cart"
-
 class Cashier
   def initialize(cart)
     @cart = cart if cart.class == "Cart"
