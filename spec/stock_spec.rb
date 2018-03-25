@@ -38,7 +38,7 @@ describe "Stock#will_out?" do
   context "number_of_cans within stock" do
     let(:number_of_cans) { 10 }
 
-    it "initialize by given parameter" do
+    it "return false" do
       expect(subject).to eq(false)
     end
   end
@@ -46,8 +46,32 @@ describe "Stock#will_out?" do
   context "number_of_cans over stock" do
     let(:number_of_cans) { 11 }
 
-    it "initialize by given parameter" do
+    it "return true" do
       expect(subject).to eq(true)
+    end
+  end
+end
+
+describe "Stock#issue" do
+  subject do
+    stock.issue(number_of_cans)
+  end
+
+  let(:stock) { Stock.new(10) }
+
+  context "number_of_cans within stock" do
+    let(:number_of_cans) { 2 }
+
+    it "return 2 cans" do
+      expect(subject.count).to eq(2)
+    end
+  end
+
+  context "number_of_cans over stock" do
+    let(:number_of_cans) { 11 }
+
+    it "return nil" do
+      expect(subject).to eq(nil)
     end
   end
 end

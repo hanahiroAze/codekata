@@ -11,6 +11,12 @@ class Stock
     @cans.count < number_of_cans
   end
 
+  def issue(number_of_cans)
+    unless will_out?(number_of_cans)
+      number_of_cans.to_i.times.map { |i| @cans[i] }
+    end
+  end
+
   private
 
   def stock_can
